@@ -2,7 +2,6 @@ use std::collections::HashMap;
 
 use serde::{Serialize, Deserialize};
 
-/// Map information
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct Map {
@@ -18,8 +17,6 @@ pub struct Map {
     /// Terrorists team info
     pub team_t: super::TeamInfo,
     pub num_matches_to_win_series: u8,
-    pub current_spectators: u8,
-    pub souvenirs_total: u8
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]

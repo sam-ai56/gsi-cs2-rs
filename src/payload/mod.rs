@@ -58,7 +58,7 @@ pub struct Provider {
 pub struct Bomb {
     pub state: String,
     pub position: String,
-    pub player: Option<u64>
+    pub player: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]

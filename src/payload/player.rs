@@ -7,9 +7,9 @@ use serde::{Serialize, Deserialize};
 pub struct Player {
     #[serde(rename = "steamid")]
     pub steam_id: Option<String>,
-    /// Clan name
-    pub clan: Option<String>,
-    pub name: String,
+    // Clan name
+    // pub clan: Option<String>,
+    pub name: Option<String>,
     pub observer_slot: Option<u8>,
     pub team: Option<super::TeamClass>,
     /// In game activity
@@ -37,28 +37,30 @@ pub enum Activity {
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct MatchStats {
-    pub kills: i64,
-    pub assists: u64,
-    pub deaths: u64,
-    pub mvps: u64,
-    pub score: u64
+    pub kills: u16,
+    pub assists: u16,
+    pub deaths: u16,
+    pub mvps: u8,
+    pub score: u16
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct State {
-    pub health: u64,
-    pub armor: u64,
+    pub health: u8,
+    pub armor: u8,
     pub helmet: bool,
-    pub flashed: u16,
-    pub smoked: Option<u64>,
-    pub burning: u16,
+    pub flashed: u8,
+    #[serde(default)]
+    pub smoked: u8,
+    pub burning: u8,
     pub money: u16,
-    pub round_kills: i64,
+    pub round_kills: u16,
     /// Round headshots kills
     pub round_killhs: u64,
-    pub round_totaldmg: Option<u64>,
-    pub equip_value: u64,
-    #[serde(rename = "defusekit")]
-    pub defuse_kit: Option<bool>
+    #[serde(default)]
+    pub round_totaldmg: u32,
+    pub equip_value: u16,
+    #[serde(rename = "defusekit", default)]
+    pub defuse_kit: bool
 }

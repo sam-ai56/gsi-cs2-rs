@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 pub struct Round {
     pub phase: RoundPhase,
     pub bomb: Option<BombState>,
-    pub win_team: Option<super::TeamInfo>
+    pub win_team: Option<super::TeamClass>
 }
 
 
