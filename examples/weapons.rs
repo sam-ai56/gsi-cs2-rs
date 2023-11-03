@@ -3,7 +3,7 @@ use poem::{
     Route, Server, web::Json
 };
 use gsi_cs2::{
-    Body, payload::weapon::{
+    Body, weapon::{
         WeaponState, WeaponType::*, WeaponName
     }
 };
@@ -28,12 +28,12 @@ fn update(data: Json<Body>) {
 
     print!("\x1B[2J\x1B[1;1H"); //clear
 
-    // Cheking player weapons for active state
+    // A loop through all weapons
     for (_k, weapon) in weapons.iter() {
 
-        // The weapon that is currently active
+        // Check if the weapon is currently active
         if let WeaponState::Active = weapon.state {
-            // These types do not have ammo
+            // There is no ammunition for these types of weapons
             match weapon.r#type {
                 Some(Knife)         => println!("Knife"),
                 Some(Melee)         => println!("Melee"),
@@ -56,17 +56,20 @@ fn update(data: Json<Body>) {
                     }
                 }
             }
-
+            // Check if the name of the weapon is "weapon_glock"
             if let WeaponName::Glock = weapon.name {
                 println!("\nWow, is that a Glock?");
             }
 
+            // The same, but for "weapon_usp_silencer"
             if let WeaponName::USPS = weapon.name {
                 println!("\nWow, is that a USP-S?");
             }
+            return;
         }
 
-        if let WeaponState::Reloading = weapon.state{
+        // Checking if the weapon is reloading
+        if let WeaponState::Reloading = weapon.state {
             println!("Reloading...");
         }
     }

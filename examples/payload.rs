@@ -5,7 +5,7 @@ use poem::{
 use gsi_cs2::Body;
 
 #[handler]
-async fn update(data: Json<Body>) {
+fn update(data: Json<Body>) {
     println!("{:#?}", data);
 }
 

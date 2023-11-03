@@ -1,13 +1,18 @@
-use serde::{Serialize, Deserialize};
+use serde::{
+    Serialize, Deserialize
+};
+use super::team::TeamClass;
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct Round {
+    /// Round phase. Refer to [RoundPhase].
     pub phase: RoundPhase,
+    /// Bomb state. Refer to [BombState].
     pub bomb: Option<BombState>,
-    pub win_team: Option<super::TeamClass>
+    /// Team info that is won round. Refer to [TeamClass].
+    pub win_team: Option<TeamClass>
 }
-
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(rename_all = "lowercase")]

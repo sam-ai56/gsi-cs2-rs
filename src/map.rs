@@ -1,21 +1,30 @@
 use std::collections::HashMap;
 
-use serde::{Serialize, Deserialize};
+use serde::{
+    Serialize, Deserialize
+};
+
+use super::team::TeamInfo;
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct Map {
+    /// Round [number, condition].
     #[serde(default)]
     pub round_wins: HashMap<u8, String>,
+    /// Game Mode. Refer to [Mode].
     pub mode: Mode,
+    /// Map's title.
     pub name: String,
-    pub phase: GeneralPhase,
-    /// Current round
+    /// Present stage of the game. Refer to [RoundPhase].
+    pub phase: RoundPhase,
+    /// Current round count.
     pub round: u8,
-    /// Counter Terrorists team info
-    pub team_ct: super::TeamInfo,
-    /// Terrorists team info
-    pub team_t: super::TeamInfo,
+    /// Details regarding the Counter-Terrorists team. Refer to [TeamInfo].
+    pub team_ct: TeamInfo,
+    /// Details regarding the Terrorists team. Refer to [TeamInfo].
+    pub team_t: TeamInfo,
+    /// Count of victories required to secure the series.
     pub num_matches_to_win_series: u8,
 }
 
@@ -38,7 +47,7 @@ pub enum Mode {
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(rename_all = "lowercase")]
-pub enum GeneralPhase {
+pub enum RoundPhase {
     Warmup,
     Live,
     Intermission,

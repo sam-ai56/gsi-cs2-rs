@@ -1,19 +1,25 @@
-use serde::{Serialize, Deserialize};
+use serde::{
+    Serialize, Deserialize
+};
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct Weapon {
+    /// Weapon name. Refer to [WeaponName].
     pub name: WeaponName,
+    /// Skin name.
     pub paintkit: String,
+    /// Weapon type. Refer to [WeaponType].
     pub r#type: Option<WeaponType>,
+    /// Weapon state. Refer to [WeaponState].
     pub state: WeaponState,
-
+    /// Ammo clip.
     #[serde(default)]
     pub ammo_clip: u16,
-
+    /// Maximum amount of ammo in the clip.
     #[serde(default)]
     pub ammo_clip_max: u16,
-
+    /// Amount of reserve ammo.
     #[serde(default)]
     pub ammo_reserve: u16
 }
