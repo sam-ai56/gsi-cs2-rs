@@ -18,8 +18,9 @@ In order to run examples, you need to add this to Cargo.toml
 
 ```toml
 [dependencies]
-gsi-cs2 = "0.1.0"
+gsi-cs2 = "0.1.1"
 poem = { version = "1.3.48", features = ["server"] }
+serde_json = "1.0.87"
 tokio = { version = "1.21.2", features = ["rt-multi-thread", "macros"] }
 tracing-subscriber = { version = "0.3.16" }
 ```
@@ -28,7 +29,7 @@ tracing-subscriber = { version = "0.3.16" }
 
 In this example we can see serialized data from cs2
 
->[example/payload.rs](https://github.com/sam-ai56/gsi-cs2-rs/blob/main/examples/payload.rs "example/payload.rs") | *cargo run --example payload*
+[example/payload.rs](https://github.com/sam-ai56/gsi-cs2-rs/blob/main/examples/payload.rs "example/payload.rs") | *cargo run --example payload*
 
 ```rust
 use poem::{
@@ -58,7 +59,7 @@ async fn main() -> Result<(), std::io::Error> {
 
 This example shows how to get the state of your active weapon.
 
->[example/weapons.rs](https://github.com/sam-ai56/gsi-cs2-rs/blob/main/examples/weapons.rs "example/weapons.rs") | *cargo run --example weapons*
+[example/weapons.rs](https://github.com/sam-ai56/gsi-cs2-rs/blob/main/examples/weapons.rs "example/weapons.rs") | *cargo run --example weapons*
 
 ```rust
 use poem::{
@@ -66,7 +67,7 @@ use poem::{
     Route, Server, web::Json
 };
 use gsi_cs2::{
-    Body, payload::weapon::{
+    Body, weapon::{
         WeaponState, WeaponType::*, WeaponName
     }
 };
