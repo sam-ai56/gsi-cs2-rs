@@ -5,7 +5,6 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Sam Miller"]
 documentation = "https://docs.rs/gsi-cs2"
-homepage = "https://github.com/sam-ai56/gsi-cs2-rust"
 repository = "https://github.com/sam-ai56/gsi-cs2-rust"
 readme = "README.md"
 license = "MIT"
