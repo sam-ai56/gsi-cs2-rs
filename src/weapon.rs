@@ -116,18 +116,63 @@ pub enum WeaponName {
     /// Terrorist Knife
     #[serde(rename = "weapon_knife_t")]
     KnifeT,
-    /// WidowMaker Knife
-    #[serde(rename = "weapon_knife_widowmaker")]
-    KnifeWidowMaker,
+    /// Bayonet Knife
+    #[serde(rename = "weapon_bayonet")]
+    KnifeBayonet,
+    /// Bowie Knife
+    #[serde(rename = "weapon_knife_survival_bowie")]
+    KnifeBowie,
     /// Butterfly Knife
     #[serde(rename = "weapon_knife_butterfly")]
     KnifeButterfly,
+    /// Classic Knife
+    #[serde(rename = "weapon_knife_css")]
+    KnifeClassic,
+    /// Falchion Knife
+    #[serde(rename = "weapon_knife_falchion")]
+    KnifeFalchion,
+    /// Flip Knife
+    #[serde(rename = "weapon_knife_flip")]
+    KnifeFlip,
+    /// Gut Knife
+    #[serde(rename = "weapon_knife_gut")]
+    KnifeGut,
+    /// Huntsman Knife
+    #[serde(rename = "weapon_knife_tactical")]
+    KnifeHuntsman,
+    /// Karambit Knife
+    #[serde(rename = "weapon_knife_karambit")]
+    KnifeKarambit,
     /// Kukri Knife
     #[serde(rename = "weapon_knife_kukri")]
     KnifeKukri,
     /// M9_Bayonet Knife
     #[serde(rename = "weapon_knife_m9_bayonet")]
     KnifeM9Bayonet,
+    /// Navaja Knife
+    #[serde(rename = "weapon_knife_gypsy_jackknife")]
+    KnifeNavaja,
+    /// Nomad Knife
+    #[serde(rename = "weapon_knife_outdoor")]
+    KnifeNomad,
+    /// Paracord Knife
+    #[serde(rename = "weapon_knife_cord")]
+    KnifeParacord,
+    /// Shadow Daggers
+    #[serde(rename = "weapon_knife_push")]
+    KnifeShadowDaggers,
+    /// Skeleton Knife
+    #[serde(rename = "weapon_knife_skeleton")]
+    KnifeSkeleton,
+    /// Stiletto Knife
+    #[serde(rename = "weapon_knife_stiletto")]
+    KnifeStiletto,
+    /// Survival Knife
+    #[serde(rename = "weapon_knife_canis")]
+    KnifeSurvival,
+    /// Talon Knife
+    #[serde(rename = "weapon_knife_talon")]
+    KnifeTalon,
     /// Ursus Knife
     #[serde(rename = "weapon_knife_ursus")]
     KnifeUrsus,
