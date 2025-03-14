@@ -119,6 +119,12 @@ pub enum WeaponName {
     /// WidowMaker Knife
     #[serde(rename = "weapon_knife_widowmaker")]
     KnifeWidowMaker,
+    /// Butterfly Knife
+    #[serde(rename = "weapon_knife_butterfly")]
+    KnifeButterfly,
+    /// Kukri Knife
+    #[serde(rename = "weapon_knife_kukri")]
+    KnifeKukri,
     /// M249
     #[serde(rename = "weapon_m249")]
     M249,
