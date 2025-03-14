@@ -128,6 +128,9 @@ pub enum WeaponName {
     /// M9_Bayonet Knife
     #[serde(rename = "weapon_knife_m9_bayonet")]
     KnifeM9Bayonet,
+    /// Ursus Knife
+    #[serde(rename = "weapon_knife_ursus")]
+    KnifeUrsus,
     /// M249
     #[serde(rename = "weapon_m249")]
     M249,
