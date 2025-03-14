@@ -14,8 +14,8 @@ pub struct Player {
     #[serde(rename = "steamid")]
     pub steam_id: Option<String>,
 
-    // Clan name
-    // pub clan: Option<String>,
+    /// Clan name
+    pub clan: Option<String>,
 
     /// Username of the player.
     pub name: Option<String>,
