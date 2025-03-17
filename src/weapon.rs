@@ -171,7 +171,7 @@ pub enum WeaponName {
     #[serde(rename = "weapon_knife_canis")]
     KnifeSurvival,
     /// Talon Knife
-    #[serde(rename = "weapon_knife_talon")]
+    #[serde(rename = "weapon_knife_widowmaker")]
     KnifeTalon,
     /// Ursus Knife
     #[serde(rename = "weapon_knife_ursus")]
