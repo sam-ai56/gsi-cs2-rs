@@ -79,7 +79,7 @@ pub struct State {
     /// How much the player is burning.
     pub burning: u8,
     /// Where do you get the money from?
-    pub money: u16,
+    pub money: u32,
     /// The number of kills a player has made in the current round.
     pub round_kills: u16,
     /// The number of kills a player has made with headshots in the current round.
