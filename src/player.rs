@@ -37,7 +37,10 @@ pub struct Player {
     /// Player's position in the world.
     pub position: Option<String>,
     /// Player's forward movement.
-    pub forward: Option<String>
+    pub forward: Option<String>,
+
+    /// Player's XP overload.
+    pub xpoverload: Option<u8>
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
