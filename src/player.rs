@@ -14,8 +14,8 @@ pub struct Player {
     #[serde(rename = "steamid")]
     pub steam_id: Option<String>,
 
-    // Clan name
-    // pub clan: Option<String>,
+    /// Clan name
+    pub clan: Option<String>,
 
     /// Username of the player.
     pub name: Option<String>,
@@ -37,7 +37,10 @@ pub struct Player {
     /// Player's position in the world.
     pub position: Option<String>,
     /// Player's forward movement.
-    pub forward: Option<String>
+    pub forward: Option<String>,
+
+    /// Player's XP overload.
+    pub xpoverload: Option<u8>
 }
 
 #[derive(Deserialize, Serialize, Clone, Debug)]
@@ -79,7 +82,7 @@ pub struct State {
     /// How much the player is burning.
     pub burning: u8,
     /// Where do you get the money from?
-    pub money: u16,
+    pub money: u32,
     /// The number of kills a player has made in the current round.
     pub round_kills: u16,
     /// The number of kills a player has made with headshots in the current round.
